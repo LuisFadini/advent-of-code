@@ -6,11 +6,11 @@ Meu repositório com as minhas soluções para o [Advent of Code](https://advent
 
 ### 2025
 
-Para esta edição, planejo apenas uma linguagem de programação: C. A escolha do C foi simples, é uma linguagem que queria aprender e se Rust consegui aprender no Advent of Code de 2024, acredito conseguir pelo menos o básico de C em 2025.
+Para esta edição, planejo apenas uma linguagem de programação: C. A escolha do C foi simples, é uma linguagem que queria aprender e se Rust consegui aprender no Advent of Code de 2024, acredito consigo pelo menos o básico de C em 2025.
 
-| Dia    | Soluções                                                 |
-| ------ | -------------------------------------------------------- |
-| Dia 1  | [Rust](./2025/day1/day1.c) - [JS](./2025/day1/day1.mjs) |
+| Dia   | Soluções                                             |
+| ----- | ---------------------------------------------------- |
+| Dia 1 | [C](./2025/day1/day1.c) - [JS](./2025/day1/day1.mjs) |
 
 ### 2024
 
@@ -51,3 +51,4 @@ Embora eu não tenha participado, resolvi o problema do primeiro dia para testar
 | Dia   | Soluções                                                 |
 | ----- | -------------------------------------------------------- |
 | Dia 1 | [Rust](./2023/day1/day1.rs) - [JS](./2023/day1/day1.mjs) |
+
