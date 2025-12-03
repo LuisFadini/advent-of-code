@@ -8,3 +8,6 @@ target/
 Cargo.lock
 **/*.rs.bk
 *.pdb
+
+# C gitignore
+day*.out
