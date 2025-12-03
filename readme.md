@@ -11,6 +11,7 @@ Para esta edição, planejo apenas uma linguagem de programação: C. A escolha 
 | Dia   | Soluções                                             |
 | ----- | ---------------------------------------------------- |
 | Dia 1 | [C](./2025/day1/day1.c) - [JS](./2025/day1/day1.mjs) |
+| Dia 2 | [C](./2025/day2/day2.c)                              |
 
 ### 2024
 
