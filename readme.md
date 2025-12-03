@@ -4,6 +4,14 @@ Meu repositório com as minhas soluções para o [Advent of Code](https://advent
 
 ## Soluções
 
+### 2025
+
+Para esta edição, planejo apenas uma linguagem de programação: C. A escolha do C foi simples, é uma linguagem que queria aprender e se Rust consegui aprender no Advent of Code de 2024, acredito conseguir pelo menos o básico de C em 2025.
+
+| Dia    | Soluções                                                 |
+| ------ | -------------------------------------------------------- |
+| Dia 1  | [Rust](./2025/day1/day1.c) - [JS](./2025/day1/day1.mjs) |
+
 ### 2024
 
 Para esta edição, planejo usar três linguagens de programação: Rust, C e JavaScript. Embora o JavaScript seja a única linguagem que domino, meu objetivo é aprender e melhorar nas outras duas - Rust e C.
