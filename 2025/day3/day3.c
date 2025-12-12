@@ -1,8 +1,9 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
+#include <stdint.h>
 
-__uint64_t max_k_subsequence(const char *s, int max_digits)
+uint64_t max_k_subsequence(const char *s, int max_digits)
 {
   int digit_count = 0;
   for (const char *p = s; *p; p++)
@@ -31,16 +32,16 @@ __uint64_t max_k_subsequence(const char *s, int max_digits)
       to_remove--;
   }
 
-  __uint64_t val = 0;
+  uint64_t val = 0;
   for (int i = 0; i < max_digits; i++)
     val = val * 10 + (stack[i] - '0');
 
   return val;
 }
 
-__uint64_t run_common(FILE *fp, int max_digits)
+uint64_t run_common(FILE *fp, int max_digits)
 {
-  __uint64_t result_sum = 0;
+  uint64_t result_sum = 0;
   char *line = NULL;
   size_t len = 0;
 
@@ -53,12 +54,12 @@ __uint64_t run_common(FILE *fp, int max_digits)
   return result_sum;
 }
 
-__uint64_t run_part1(FILE *fp)
+uint64_t run_part1(FILE *fp)
 {
   return run_common(fp, 2);
 }
 
-__uint64_t run_part2(FILE *fp)
+uint64_t run_part2(FILE *fp)
 {
   return run_common(fp, 12);
 }
@@ -72,9 +73,9 @@ void process_file(const char *filename, const char *label)
     return;
   }
 
-  __uint64_t result_part1 = run_part1(fp);
+  uint64_t result_part1 = run_part1(fp);
   rewind(fp);
-  __uint64_t result_part2 = run_part2(fp);
+  uint64_t result_part2 = run_part2(fp);
   printf("%s: part1: %lld part2: %lld\n", label, result_part1, result_part2);
 
   fclose(fp);

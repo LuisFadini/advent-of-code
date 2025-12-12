@@ -1,8 +1,9 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
+#include <stdint.h>
 
-__uint64_t run_part1(FILE *fp)
+uint64_t run_part1(FILE *fp)
 {
   fseek(fp, 0, SEEK_END);
   long file_size = ftell(fp);
@@ -12,15 +13,15 @@ __uint64_t run_part1(FILE *fp)
   size_t n = fread(sequences, 1, file_size, fp);
   sequences[n] = '\0';
 
-  __uint64_t invalid_sum = 0;
+  uint64_t invalid_sum = 0;
 
   char *range = strtok(sequences, ",");
   while (range)
   {
-    __uint64_t start, end;
+    uint64_t start, end;
     if (sscanf(range, "%lld-%lld", &start, &end) == 2)
     {
-      for (__uint64_t num = start; num <= end; num++)
+      for (uint64_t num = start; num <= end; num++)
       {
         char buf[32];
         sprintf(buf, "%lld", num);
@@ -42,7 +43,7 @@ __uint64_t run_part1(FILE *fp)
   return invalid_sum;
 }
 
-__uint64_t run_part2(FILE *fp)
+uint64_t run_part2(FILE *fp)
 {
   fseek(fp, 0, SEEK_END);
   long file_size = ftell(fp);
@@ -52,15 +53,15 @@ __uint64_t run_part2(FILE *fp)
   size_t n = fread(sequences, 1, file_size, fp);
   sequences[n] = '\0';
 
-  __uint64_t invalid_sum = 0;
+  uint64_t invalid_sum = 0;
 
   char *range = strtok(sequences, ",");
   while (range)
   {
-    __uint64_t start, end;
+    uint64_t start, end;
     sscanf(range, "%lld-%lld", &start, &end);
 
-    for (__uint64_t num = start; num <= end; num++) {
+    for (uint64_t num = start; num <= end; num++) {
 
         char s[32];
         sprintf(s, "%lld", num);
@@ -98,9 +99,9 @@ void process_file(const char *filename, const char *label)
     return;
   }
 
-  __uint64_t result_part1 = run_part1(fp);
+  uint64_t result_part1 = run_part1(fp);
   rewind(fp);
-  __uint64_t result_part2 = run_part2(fp);
+  uint64_t result_part2 = run_part2(fp);
   printf("%s: part1: %lld part2: %lld\n", label, result_part1, result_part2);
 
   fclose(fp);
