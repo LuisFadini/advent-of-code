@@ -90,7 +90,7 @@ uint64_t run_part2(FILE *fp)
   return invalid_sum;
 }
 
-void process_file(const char *filename, const char *label)
+void process_file(const char *filename, const int day)
 {
   FILE *fp = fopen(filename, "r");
   if (!fp)
@@ -102,15 +102,15 @@ void process_file(const char *filename, const char *label)
   uint64_t result_part1 = run_part1(fp);
   rewind(fp);
   uint64_t result_part2 = run_part2(fp);
-  printf("%s: part1: %lld part2: %lld\n", label, result_part1, result_part2);
+  printf("Day %d %s:part1: %lld part2: %lld\n", day, filename, result_part1, result_part2);
 
   fclose(fp);
 }
 
 int main(void)
 {
-  process_file("sample1.txt", "Sample 1 outputs");
-  process_file("input.txt", "Outputs");
+  process_file("sample1.txt", 2);
+  process_file("input.txt", 2);
 
   return 0;
 }

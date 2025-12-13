@@ -155,7 +155,7 @@ int run_part2(FILE *fp)
   return total;
 }
 
-void process_file(const char *filename, const char *label)
+void process_file(const char *filename, const int day)
 {
   FILE *fp = fopen(filename, "r");
   if (!fp)
@@ -167,15 +167,15 @@ void process_file(const char *filename, const char *label)
   int result_part1 = run_part1(fp);
   rewind(fp);
   int result_part2 = run_part2(fp);
-  printf("%s: part1: %d part2: %d\n", label, result_part1, result_part2);
+  printf("Day %d %s:part1: %d part2: %d\n", day, filename, result_part1, result_part2);
 
   fclose(fp);
 }
 
 int main(void)
 {
-  process_file("sample1.txt", "Sample 1 Accessible rolls");
-  process_file("input.txt", "Accessible rolls");
+  process_file("sample1.txt", 4);
+  process_file("input.txt", 4);
 
   return 0;
 }

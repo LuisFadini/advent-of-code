@@ -61,7 +61,7 @@ int run_part2(FILE *fp)
   return possible_passwords;
 }
 
-void process_file(const char *filename, const char *label)
+void process_file(const char *filename, const int day)
 {
   FILE *fp = fopen(filename, "r");
   if (!fp)
@@ -70,18 +70,18 @@ void process_file(const char *filename, const char *label)
     return;
   }
 
-  int result_part1 = run_part1(fp);
+  auto result_part1 = run_part1(fp);
   rewind(fp);
   int result_part2 = run_part2(fp);
-  printf("%s: part1: %d part2:%d\n", label, result_part1, result_part2);
+  printf("Day %d %s: part1: %d part2:%d\n", day, filename, result_part1, result_part2);
 
   fclose(fp);
 }
 
 int main(void)
 {
-  process_file("sample1.txt", "Sample 1 possible passwords");
-  process_file("input.txt", "Possible passwords");
+  process_file("sample1.txt", 1);
+  process_file("input.txt", 1);
 
   return 0;
 }
