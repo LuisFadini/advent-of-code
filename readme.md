@@ -14,6 +14,7 @@ Para esta edição, planejo apenas uma linguagem de programação: C. A escolha 
 | Dia 2 | [C](./2025/day2/day2.c)                              |
 | Dia 3 | [C](./2025/day3/day3.c)                              |
 | Dia 4 | [C](./2025/day4/day4.c)                              |
+| Dia 5 | [C](./2025/day5/day5.c)                              |
 
 ### 2024
 
